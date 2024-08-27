@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   res.sendFile('index.html', { root:"./" })
 })
 app.get('/pages/:page', (req, res) => {
-  res.sendFile(__dirname + `/pages/${req.params.page}`)
+  res.sendFile('./' + `/pages/${req.params.page}`)
 })
 
 app.post('/submit', async (req, res) => {
